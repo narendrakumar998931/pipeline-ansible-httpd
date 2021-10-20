@@ -1,0 +1,21 @@
+---
+- name: install and restart the httpd
+  hosts: all
+  become: true
+  tasks:
+    - name: install https
+      apt:
+        name: httpd
+        state: latest
+
+    - name: copy the war file
+      copy:
+        src:
+        dest:
+
+    - name: restart the service
+      service:
+        name: httpd
+        state: started
+
+
