@@ -10,8 +10,8 @@
 
     - name: copy the war file
       copy:
-        src:
-        dest:
+        src: /var/lib/jenkins/workspace/ansible-httpd/target/ansible-httpd.war
+        dest: /var/www/html
 
     - name: restart the service
       service:
