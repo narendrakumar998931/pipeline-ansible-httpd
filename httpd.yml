@@ -12,6 +12,11 @@
       copy:
         src: /var/lib/jenkins/workspace/ansible-httpd/target/ansible-httpd.war
         dest: /var/www/html
+        
+    - name: copy index file
+      copy:
+        src: /var/lib/jenkins/workspace/ansible-httpd/src/main/webapp/index.jsp
+        dest: /var/www/html
 
     - name: restart the service
       service:
